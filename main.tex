@@ -1,5 +1,14 @@
-\documentclass{article}
-\usepackage{graphicx} % Required for inserting images
+\documentclass[12pt]{article}
+\usepackage{titlesec}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx} 
+\usepackage{setspace}
+\usepackage{indentfirst}
+\usepackage{amsmath}
+\usepackage{float}
+\usepackage{tikz}
+\doublespacing
+\usepackage{hyperref}
 
 \title{Math for Economic Analysis}
 \author{Gian Avalos}
@@ -13,6 +22,68 @@
 \tableofcontents
 
 \clearpage
-\section{Introduction}
+\section{Algebra}
+
+\subsection{Real Numbers}
+
+% align function aligns equations at the & point and numbers them, numeration removed with *
+% small spaces created using \,
+% elipses drawn with \ldots
+% larger spaces drawn with \quad
+% \\[3pt] separates each equation by 3pts
+\begin{align*}
+    &1, \, 2, \, 3, \, 4, \, \ldots \quad \quad \textbf{(natural numbers)}\\[3pt]
+    &2, \, 4, \, 6, \, 8 \, \ldots \quad \quad \textbf{(even numbers)}\\[3pt]
+    &1, \, 3, \, 5, \, 7 \, \ldots \quad \quad \textbf{(even numbers)}\\[3pt]
+    &0, \, \pm 1, \, \pm2, \, \pm3, \, \pm4, \, \ldots \quad \quad \textbf{(integers)}
+\end{align*}
+
+\begin{tikzpicture}
+    \draw[->] (-6,0) -- (6,0); % draws a number line that fits (-6,6)
+
+    % for each value in the list
+    \foreach \x in {-5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5} {
+        % (\x, 0.1) -- (\x, -0.1) draws vertical lines (ticks) centerd on the number line, going 0.1 units above and 0.1 units below
+        % node[below] attaches a label below the end of each tick
+        % {\x} the node's contents, the numbers from the list
+        \draw (\x, 0.1) -- (\x, -0.1) node[below] {\x}; % 
+    }
+
+    \filldraw[black] (0,0) circle (2pt); % draws a filled dot at 0 of 2pt size
+\end{tikzpicture}
+
+\vspace{8pt} % Adds 8pts of space between values 
+
+\large \textbf{Rational Numbers}
+
+
+\normalsize
+Numbers that can be written in the form $a/b$, where $a$ and $b$ are both integers. An integer $n$ is also an integer because $n/1 = n$.
+\begin{equation*}
+    \frac{1}{2}, \quad \frac{11}{70}, \quad \frac{125}{7}, \quad -\frac{10}{11}, \quad 0=\frac{0}{1}, \quad -1.26=-\frac{126}{100}
+\end{equation*}
+
+There are no integers $p$ and $q$ such that $\sqrt{2} = p/q$. Hence, $\sqrt{2}$ is not rational.
+
+\subsection{Integer Powers}
+
+The expression $a^n$ is called the \textbf{nth power} of a
+% \underbrace{} draws the curly brace under whatever in the braces
+% _{} is the caption underneath
+% \cdot is the centered multiplication dot
+\begin{align*}
+    &a^n = \underbrace{a \cdot a \cdot \ldots \cdot a}_{n \text{ factors}}\\[15pt]
+    % \left( ~contents~ \right) scale the parentheses to the appropriate size
+    % \hspace[-5pt] shifts the equation a bit left since the equation is not centered
+    &\hspace{-19pt}\left(\frac{p}{q}\right)^5= \frac{p}{q} \cdot \frac{p}{q} \cdot \frac{p}{q} \cdot \frac{p}{q} \cdot \frac{p}{q}\\[-30pt]
+    % add -30pt after the last equation to bring next paragraph closer
+\end{align*}
+$0^0$ is undefined. \\
+In general, 
+\begin{equation*}
+    a^{-n}= \frac{1}{a^n}
+\end{equation*}
+% neq is the symbol for not equal to 
+whenever $n$ is a natural number and $a \neq 0$.  
 
 \end{document}
