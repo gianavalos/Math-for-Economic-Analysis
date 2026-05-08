@@ -81,9 +81,40 @@ The expression $a^n$ is called the \textbf{nth power} of a
 $0^0$ is undefined. \\
 In general, 
 \begin{equation*}
-    a^{-n}= \frac{1}{a^n}
+    a^{-n}= \frac{1}{a^n} \quad \text{therefore,} \quad 3^{-2}= \frac{1}{9}
 \end{equation*}
 % neq is the symbol for not equal to 
-whenever $n$ is a natural number and $a \neq 0$.  
+whenever $n$ is a natural number and $a \neq 0$. \\
+\large Properties of Powers \vspace{-15pt}
+
+
+\normalsize 
+\begin{equation*}
+    \text{(i)} \; \; a^r \, \cdot \, a^s = a^{r+s} \quad \quad \text{(ii)} \; \; (a^r)^s = \; a^{rs}
+\end{equation*}
+
+Example 1: $a^3 \;  \cdot \;\ a^5 = \underbrace{a \, \cdot a \, \cdot a}_{3 \, \text{factors}} \, \cdot \; \underbrace{a \, \cdot a \, \cdot a \, \cdot a \, \cdot a}_{5 \, \text{factors}} = a^{3+5}=a^8$
+
+% From the graphicx package used to scale the text down to one line
+\scalebox{0.85}{Example 2: $(a^2)^4= \underbrace{a \, \cdot \, a}_{2 \, \text{factors}} \, \cdot \, \underbrace{a \, \cdot \, a}_{2 \, \text{factors}} \, \cdot \, \underbrace{a \, \cdot \, a}_{2 \, \text{factors}} \, \cdot \, \underbrace{a \, \cdot \, a}_{2 \, \text{factors}} = \underbrace{a \, \cdot \, a \, \cdot \, a \, \cdot \, a \, \cdot \, a \, \cdot \, a \, \cdot \, a \cdot \, a}_{8 \, \text{factors}} = a^{3 + 5}=a^8$ \hspace{-20pt}} \vspace{7pt}
+
+Same base division:
+\begin{equation*}
+    a^r \, \div \, a^s=\frac{a^r}{a^s}=a^r\frac{1}{a^s}=a^r \, \cdot \, a^{-s}=a^{r-s}\\
+\end{equation*}
+\vspace{-60pt}
+\begin{equation*}
+    a^3 \div a^5=a^{3-5}=a^{-2}
+\end{equation*}
+\vspace{-20pt}
+\begin{equation*}
+    (ab)^r = \underbrace{ab \, \cdot ab \, \cdot \ldots \cdot \, ab}_{r \, \text{factors}} = \underbrace{a \, \cdot a \, \cdot \ldots \cdot \, a}_{r \, \text{factors}} \, \cdot \, \underbrace{b \, \cdot b \, \cdot \ldots \cdot \, b}_{r \, \text{factors}} = a^rb^r
+\end{equation*}
+\vspace{-15pt}
+
+% overbrace function draws brace above contents, uses ^ instead of _ for the label
+\begin{equation*}
+    \left( \frac{a}{b} \right)^r = \underbrace{\frac{a}{b} \, \cdot \, \frac{a}{b} \, \cdot \, \ldots \, \cdot \frac{a}{b}}_{r \, \text{factors}} = \frac{\overbrace{a \, \cdot a \, \cdot \ldots \, \cdot a}^{r \, \text{factors}}}{\underbrace{b \, \cdot b \, \cdot \ldots \, \cdot b}_{r \, \text{factors}}}=\frac{a^r}{b^r}=a^rb^{-r}
+\end{equation*}
 
 \end{document}
